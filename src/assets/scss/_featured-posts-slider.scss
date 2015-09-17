@@ -1,0 +1,72 @@
+.featured-post {
+	position: relative;
+}
+
+.slide-info {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 33%;
+	@include background-image(linear-gradient(bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%));
+
+	.post-categories {
+		padding: 0;
+		list-style-type: none;
+	}
+
+	li {
+		display: inline-block;
+	}
+}
+
+.slide-copy {
+	position: absolute;
+	bottom: 40%;
+	left: 7%;
+	width: 95%;
+	@include transform(translateY(50%));
+}
+
+// ul.slick-dots {
+//   position: absolute;
+//   bottom: 0;
+//   width: 100%;
+//   text-align: center;
+//   list-style-type: none;
+//   padding: 0;
+//   @include transform(translateY(100%));
+
+//   li {
+//   	position: relative;
+//     width: 50px;
+//     background-position: center center;
+//     background-repeat: no-repeat;
+//     @include inline-block;
+
+//     &:after {
+//     	content: '';
+// 		display: block;
+// 		width: 10px;
+// 		height: 10px;
+// 		background-color: rgba(0, 0, 0, 0);
+// 		border-radius: 50%;
+// 		border: 1px solid $border-color;
+// 		position: absolute;
+// 		top: 50%;
+// 		left: 50%;
+// 		transform: translate(-50%, -50%);
+//     }
+
+//     &.slick-active {
+//     	&:after {
+// 			background-color: $primary-color;
+//     	}
+//     }
+
+//     button {
+//       opacity: 0;
+//     }
+//   }
+// }
+

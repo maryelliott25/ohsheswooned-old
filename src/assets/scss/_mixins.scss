@@ -1,0 +1,5 @@
+@mixin set-font($family, $weight: normal, $style: normal) {
+	font-family: $family, Helvetica, Arial, sans-serif;
+	font-weight: $weight;
+	font-style: $style;
+}

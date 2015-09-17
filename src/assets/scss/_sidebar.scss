@@ -1,0 +1,20 @@
+.widget {
+	margin-bottom: 50px;
+
+	ul {
+		margin: 0;
+	}
+
+	li {
+		display: block;
+	    width: 100%;
+	    height: 40px;
+	    line-height: 40px;
+	    background-color: $primary-color;
+	    border-bottom: 2px solid #FFFFFF;
+	}
+}
+
+.about-image {
+	padding: 0 30px;
+}

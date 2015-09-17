@@ -1,0 +1,143 @@
+//Color Variables
+$primary-color: rgb(242, 240, 240);
+$border-color: rgba(0, 0, 0, 0.15);
+$secondary-copy-color: rgba(0, 0, 0, 0.5);
+
+//Typography Variables
+$large-tracking: 0.15em;
+$small-tracking: 0.06em;
+
+//Typography
+body {
+	font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@include set-font('Crimson Text');
+	margin: 0;
+}
+
+p {
+	@include set-font('Lato');
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+ul {
+	padding: 0;
+}
+
+//Header Typography
+
+h2.site-description {
+	font-size: 0.625em;
+	text-transform: uppercase;
+	letter-spacing: $large-tracking;
+	text-align: center;
+	margin: 1.5em 0 3em;
+}
+
+.main-navigation li a {
+	@include set-font('Crimson Text', bold);
+	font-size: 0.75em;
+	text-transform: uppercase;
+	letter-spacing: $large-tracking;
+}
+
+//Slider Typography
+h2.slide-title {
+	@include set-font('Lato', 100);
+	font-size: 1.5em;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: $small-tracking;
+}
+
+.slide-copy {
+	color: #FFFFFF;
+}
+
+.slide-copy a {
+	@include set-font('Crimson Text', bold);
+	color: white;
+	font-size: 0.75em;
+	letter-spacing: $large-tracking;
+	text-transform: uppercase;
+}
+
+//Index Post Styling
+.post-category-wrap a {
+	@include set-font('Lato', bold);
+	font-size: 0.8em;
+	letter-spacing: $small-tracking;
+	text-transform: uppercase;
+}
+
+.post-body-copy {
+	h1 {
+		font-size: 1.5em;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 0.03em;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	.entry-meta {
+		@include set-font('Crimson Text', normal, italic);
+		font-size: 0.8125em;
+		text-align: center;
+		margin-bottom: 2.6923em;
+	}
+
+	.entry-content p {
+		font-size: 1em;
+		line-height: 1.8889em;
+	}
+
+	em:last-of-type {
+		font-size: 0.8889em;
+	}
+}
+
+.index-post-tags {
+	@include set-font('Crimson Text', normal);
+	font-size: 0.75em;
+}
+
+.index-posts-navigation {
+	@include set-font('Lato', normal);
+}
+
+//Sidebar Styling
+.widget {
+	h1 {
+		@include set-font('Crimson Text', 100);
+	    font-size: 0.85em;
+	    text-transform: uppercase;
+	    text-align: center;
+	    letter-spacing: 0.15em;
+	    margin-bottom: 1em;
+	}
+
+	li {
+		text-align: center;
+	}
+
+	a {
+		@include set-font('Lato', normal);
+		font-size: 0.875em;
+		text-transform: uppercase;
+		color: #000000;
+		vertical-align: middle;
+	}
+}
+
+.about-copy {
+	@include set-font('Crimson Text', normal, italic);
+	font-size: 0.75em;
+	line-height: 1.5em;
+	text-align: center;
+}

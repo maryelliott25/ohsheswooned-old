@@ -1,0 +1,21 @@
+.site-logo {
+	display: block;
+	margin: 0 auto;
+}
+
+.main-navigation ul {
+	display: block;
+	width: 100%;
+	max-width: 1020px;
+	margin: 0 auto;
+	list-style-type: none;
+	overflow: hidden;
+
+	li {
+		display: block;
+		float: left;
+		width: 16.6%;
+		text-align: center;
+		padding: 25px 0;
+	}
+}

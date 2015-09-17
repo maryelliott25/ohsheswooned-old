@@ -1,0 +1,26 @@
+body {
+	padding: 25px;
+    background-color: $primary-color;
+	overflow-x: hidden;
+}
+
+.site {
+	background-color: #FFFFFF;
+	padding: 60px 50px 50px;
+}
+
+.content-wrap {
+	position: relative;
+  	max-width: 1125px;
+  	margin: 100px auto 0;
+}
+
+.post-wrap {
+	margin-left: 400px;
+}
+
+.widget-area {
+	position: absolute;
+	top: 0;
+	width: 300px;
+}

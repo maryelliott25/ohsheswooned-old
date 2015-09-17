@@ -1,0 +1,116 @@
+.post-wrap article {
+	margin-top: 100px;
+}
+
+.post-thumbnail {
+	display: block;
+}
+
+.post-category-wrap {
+	height: 1.3px;
+	background-color: $border-color;
+	text-align: center;
+	margin-bottom: 25px;
+
+	a {
+		position: relative;
+		top: -9px;
+		background-color: #FFFFFF;
+		padding: 5px 20px;
+	}
+}
+
+.post-body-copy {
+	padding: 25px;
+	background-color: $primary-color;
+}
+
+.post-title-wrap {
+	position: relative;
+	text-align: center;
+
+	&:after {
+		content: "";
+	    display: block;
+	    position: absolute;
+	    background-color: rgba(0, 0, 0, 0.15);
+	    height: 1px;
+	    width: 100%;
+	    top: 45%;
+	    z-index: 0;
+	}
+	
+	h1 {
+		position: relative;
+		z-index: 2;
+		padding: 10px 20px;
+	}
+
+	a {
+		display: inline;
+		outline: 20px solid $primary-color;
+		background-color: $primary-color;
+		padding-top: 2px;
+	}
+}
+
+.entry-meta {
+	position: relative;
+	z-index: 2;
+}
+
+.entry-content {
+	margin-bottom: 40px;
+}
+
+.index-post-tags {
+	.tag-icon {
+		display: inline-block;
+		width: 30px;
+		vertical-align: middle;
+		margin-right: 5px;
+	}
+
+	a {
+		vertical-align: middle;
+	}
+}
+
+.index-posts-navigation {
+	position: relative;
+	text-align: center;
+	margin-top: 100px;
+	padding: 20px 0;
+
+	.page-numbers {
+		margin: 0 3px;
+		padding: 7px 10px;
+		border: 1px solid $border-color;
+
+		&:hover {
+			background-color: $primary-color;
+			border: 1px solid $primary-color;
+		}
+	}
+
+	.prev {
+		position: absolute;
+		margin-right: 40px;
+		left: 0;
+		top: 50%;
+		@include transform(translateY(-50%));
+	}
+
+	.next {
+		position: absolute;
+		margin-left: 40px;
+		right: 0;
+		top: 50%;
+		@include transform(translateY(-50%));
+	}
+
+	.current {
+		background-color: $primary-color;
+		border: 1px solid $primary-color;
+	}
+}
