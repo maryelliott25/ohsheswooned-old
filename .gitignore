@@ -1,4 +1,4 @@
-./node_modules/
+node_modules/
 .scss-lint.yml
 project.sublime-project
 project.sublime-workspace
