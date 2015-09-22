@@ -145,3 +145,8 @@ function register_recipes_post_type() {
     register_post_type( 'recipe', $args );
 }
 add_action( 'init', 'register_recipes_post_type' );
+
+/**
+ * Recipe post type
+ */
+require get_template_directory() . '/inc/post-type-recipe.php';
