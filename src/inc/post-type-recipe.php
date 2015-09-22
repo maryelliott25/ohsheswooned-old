@@ -48,7 +48,7 @@ function oss_print_servings_box($post, $metabox) {
 
   $value = get_post_meta( $post->ID, '_oss_servings_value_key', true );
 
-	echo '<input type="text" id="oss_servings_field" name="oss_servings_field" value="' . esc_attr( $value ) . '" size="25" placeholder="Number of servings"/>';
+	echo '<input type="text" id="oss_servings_field" name="oss_servings_field" value="' . esc_attr( $value ) . '" size="25" placeholder="Mary Elliott"/>';
 }
 
 function oss_print_time_box($post, $metabox) {
@@ -57,7 +57,7 @@ function oss_print_time_box($post, $metabox) {
 
   $value = get_post_meta( $post->ID, '_oss_time_value_key', true );
 
-	echo '<input type="text" id="oss_time_field" name="oss_time_field" value="' . esc_attr( $value ) . '" size="25" placeholder="Cooking time"/>';
+	echo '<input type="text" id="oss_time_field" name="oss_time_field" value="' . esc_attr( $value ) . '" size="25" placeholder="I love you!"/>';
 }
 
 function oss_print_ingredients_box($post, $metabox) {
@@ -102,12 +102,41 @@ function oss_print_ingredients_box($post, $metabox) {
     var $=jQuery;
     $('#oss-add-new-ingredient').on('click', function(){
       var newIngredients = $('.oss-ingredient-listing').first().clone();
-      newIngredients.find('.oss-ingredient-qty').attr('name', 'oss_ingredients_field[' + ingredientCounter + '][qty]');
-      newIngredients.find('.oss-ingredient-name').attr('name', 'oss_ingredients_field[' + ingredientCounter + '][name]');
+      newIngredients.find('.oss-ingredient-qty').attr('name', 'oss_ingredients_field[' + ingredientCounter + '][qty]').attr('value', '');
+      newIngredients.find('.oss-ingredient-name').attr('name', 'oss_ingredients_field[' + ingredientCounter + '][name]').attr('value', '');
       $('#oss-ingredients-listings').append(newIngredients);
       ingredientCounter++;
     });
   </script>";
+
+  echo "<style>
+    #oss-add-new-ingredient {
+      cursor: pointer;
+    }
+
+    .oss-ingredients-label {
+      font-size: 0;
+    }
+
+    .oss-ingredients-qty-label, .oss-ingredients-text-label {
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    .oss-ingredients-qty-label {
+      width: 60px;
+    }
+
+    .oss-ingredient-qty {
+      display: inline-block;
+      width: 54px;
+    }
+
+    .oss-ingredient-listing {
+      margin-bottom: 3px;
+    }
+
+  </style>";
 }
 
 add_action( 'save_post', 'oss_save_servings_meta_box_data' );
@@ -193,6 +222,12 @@ function oss_save_ingredients_meta_box_data( $post_id ) {
 
   // Sanitize user input
   $ingredients_data =  $_POST['oss_ingredients_field'];
+
+  foreach($ingredients_data as $entry_key => $entry) {
+    if($entry['qty'] === '' && $entry['name'] === '') {
+      unset($ingredients_data[$entry_key]);
+    }
+  }
 
   update_post_meta($post_id, '_oss_ingredients_value_key', $ingredients_data);
 }
