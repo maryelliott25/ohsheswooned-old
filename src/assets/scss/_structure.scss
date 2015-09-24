@@ -1,6 +1,10 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
-	padding: 25px;
-    background-color: $primary-color;
+	padding: 50px;
+  background-color: $primary-color;
 	overflow-x: hidden;
 }
 

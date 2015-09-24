@@ -639,8 +639,11 @@ h2.slide-title {
   line-height: 1.5em;
   text-align: center; }
 
+* {
+  box-sizing: border-box; }
+
 body {
-  padding: 25px;
+  padding: 50px;
   background-color: #f2f0f0;
   overflow-x: hidden; }
 
@@ -815,3 +818,104 @@ body {
 
 .about-image {
   padding: 0 30px; }
+
+.oss_recipe .featured-image-wrapper {
+  height: 450px; }
+.oss_recipe .featured-image {
+  position: absolute;
+  width: 100%;
+  top: auto;
+  left: 0;
+  background-color: blue;
+  background-size: cover;
+  background-position: center center;
+  height: 450px; }
+.oss_recipe .social-icons {
+  width: 50px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  top: auto;
+  font-size: 0; }
+.oss_recipe .social-icon {
+  width: 50px;
+  height: 50px;
+  font-size: 16px;
+  display: inline-block;
+  background-position: center center;
+  background-size: cover;
+  cursor: pointer; }
+  .oss_recipe .social-icon.facebook {
+    background-image: url('/wp-content/themes/oss/assets/images/facebook-icon.jpg'); }
+  .oss_recipe .social-icon.twitter {
+    background-image: url('/wp-content/themes/oss/assets/images/twitter-icon.jpg'); }
+  .oss_recipe .social-icon.pinterest {
+    background-image: url('/wp-content/themes/oss/assets/images/pinterest-icon.jpg'); }
+  .oss_recipe .social-icon.evernote {
+    background-image: url('/wp-content/themes/oss/assets/images/evernote-icon.jpg'); }
+.oss_recipe .entry-header {
+  text-align: center;
+  margin: 0 auto 25px;
+  max-width: 1160px;
+  padding: 25px;
+  position: relative; }
+.oss_recipe .entry-meta {
+  font-size: 0; }
+.oss_recipe .meta-icon {
+  display: inline-block;
+  font-size: 16px; }
+  .oss_recipe .meta-icon .icon-image {
+    width: 50px;
+    height: 50px;
+    background-position: center center;
+    background-size: contain; }
+  .oss_recipe .meta-icon .icon-clock {
+    background-image: url('/wp-content/themes/oss/assets/images/watch-icon.png'); }
+  .oss_recipe .meta-icon .icon-silverware {
+    background-image: url('/wp-content/themes/oss/assets/images/silverware-icon.png'); }
+  .oss_recipe .meta-icon .icon-tags {
+    background-image: url('/wp-content/themes/oss/assets/images/tag-icon.png'); }
+.oss_recipe .title-wrapper {
+  position: relative;
+  width: 100%; }
+.oss_recipe .entry-title {
+  padding: 0 30px;
+  background: white;
+  display: inline-block;
+  position: relative;
+  z-index: 2; }
+.oss_recipe .entry-line {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 2px;
+  background: lightgrey;
+  bottom: 20px;
+  z-index: 1; }
+.oss_recipe .entry-content {
+  max-width: 1160px;
+  padding: 25px;
+  margin: 0 auto;
+  position: relative; }
+  .oss_recipe .entry-content:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
+.oss_recipe .oss-ingredients-wrapper {
+  width: calc(30% - 50px);
+  position: absolute;
+  top: auto;
+  left: 25px; }
+.oss_recipe .ingredients {
+  background: lightgrey;
+  padding: 15px; }
+.oss_recipe .post-content {
+  width: 70%;
+  float: right;
+  vertical-align: top; }
+  .oss_recipe .post-content *:first-child {
+    margin-top: 0; }
