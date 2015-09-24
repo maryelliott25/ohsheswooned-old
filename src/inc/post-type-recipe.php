@@ -31,7 +31,8 @@ function oss_create_recipe_post_type() {
         'thumbnail',
         'excerpt'
       ),
-      'register_meta_box_cb' => 'oss_create_recipe_post_meta_boxes'
+      'register_meta_box_cb' => 'oss_create_recipe_post_meta_boxes',
+      'taxonomies' => array('post_tag')
     )
   );
 }
@@ -230,4 +231,19 @@ function oss_save_ingredients_meta_box_data( $post_id ) {
   }
 
   update_post_meta($post_id, '_oss_ingredients_value_key', $ingredients_data);
+}
+
+function oss_has_ingredients($ID) {
+  return get_post_meta( $ID, '_oss_ingredients_value_key', true);
+}
+
+function oss_print_ingredients($ingredients) {
+  foreach($ingredients as $ingredient) {
+    $ingredient_qty = $ingredient['qty'];
+    $ingredient_name = $ingredient['name'];
+    echo "<div class='ingredient-line'>
+      <span class='ingredient-qty'>$ingredient_qty</span>
+      <span class='ingredient-name'>$ingredient_name</span>
+    </div>";
+  }
 }
