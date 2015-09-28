@@ -49,7 +49,7 @@
       if($tags) { ?>
       <div class="meta-icon">
         <div class="icon-image icon-tags"></div>
-        <?php echo get_the_tag_list('<div class="icon-text">', ', ', '</div>') ?>
+        <?php echo get_the_tag_list('<div class="icon-text">', ', ', '</div>'); ?>
       </div>
       <?php } ?>
 
@@ -81,12 +81,61 @@
 
     <div class="post-content"><?php the_content(); ?></div>
 
+    <div class="previous-next-posts">
 		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'oss' ),
-				'after'  => '</div>',
-			) );
-		?>
+
+      $prev_post = mod_get_adjacent_post('prev', array('oss_recipe', 'post'));
+			if($prev_post) { ?>
+        <div class="pn-meta">Previous Post</div>
+        <div class="header-line"></div>
+        <div class="pn-post previous-post">
+          <?php $prev_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $prev_post->ID ), 'thumbnail' )[0]; ?>
+          <img src="<?php echo $prev_thumbnail; ?>" class="pn-image" />
+          <div class="pn-content">
+            <h4 class="pn-title"><a href="<?php echo get_permalink($prev_post->ID); ?>"><?php echo get_the_title($prev_post->ID); ?></a></h4>
+            <div class="pn-date"><?php echo get_the_date('l, F jS, Y', $prev_post->ID); ?></div>
+            <?php $tags = get_the_tags($prev_post->ID);
+            if($tags) {
+              echo "<div class='pn-tags'>";
+              $tag_array = [];
+              foreach($tags as $tag) {
+                $tag_name = $tag->name;
+                $tag_link = get_tag_link($tag->term_id);
+                $tag_array[] = "<a href='$tag_link'>$tag_name</a>";
+              }
+              echo implode(', ', $tag_array);
+              echo "</div>";
+            } ?>
+          </div>
+        </div>
+      <?php }?>
+
+      <?php $next_post = mod_get_adjacent_post('next', array('oss_recipe', 'post'));
+			if($next_post) { ?>
+        <div class="pn-meta">Next Post</div>
+        <div class="header-line"></div>
+        <div class="pn-post next-post">
+          <?php $next_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $next_post->ID ), 'thumbnail' )[0]; ?>
+          <img src="<?php echo $next_thumbnail; ?>" class="pn-image" />
+          <div class="pn-content">
+            <h4 class="pn-title"><a href="<?php echo get_permalink($next_post->ID); ?>"><?php echo get_the_title($next_post->ID); ?></a></h4>
+            <div class="pn-date"><?php get_the_date('l, F jS, Y', $next_post->ID); ?></div>
+            <?php $tags = get_the_tags($next_post->ID);
+            if($tags) {
+              echo "<div class='pn-tags'>";
+              $tag_array = [];
+              foreach($tags as $tag) {
+                $tag_name = $tag->name;
+                $tag_link = get_tag_link($tag->term_id);
+                $tag_array[] = "<a href='$tag_link'>$tag_name</a>";
+              }
+              echo implode(', ', $tag_array);
+              echo "</div>";
+            } ?>
+          </div>
+        </div>
+      <?php }?>
+    </div>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
