@@ -919,3 +919,9 @@ body {
   vertical-align: top; }
   .oss_recipe .post-content *:first-child {
     margin-top: 0; }
+.oss_recipe .previous-next-posts {
+  clear: both;
+  max-width: 1160px;
+  padding: 25px;
+  margin: 0 auto;
+  position: relative; }

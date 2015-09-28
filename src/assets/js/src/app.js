@@ -1,6 +1,6 @@
 (function (window, document, $, undefined) {
 
-  $$ = {
+  var $$ = {
     featuredSlider: $('#featured-slick'),
     ingredientsPanel: $('#oss-ingredients'),
     postPanel: $('.oss_recipe .post-content'),
@@ -16,7 +16,7 @@
       centerMode: true,
       centerPadding: '30%',
       variableWidth: true,
-      dots: true
+      dots: true,
     });
   }
 
