@@ -1,4 +1,4 @@
-.oss_recipe {
+.single-oss_recipe {
 
   .featured-image-wrapper {
     height: 450px;
@@ -97,6 +97,10 @@
     display: inline-block;
     position: relative;
     z-index: 2;
+
+    .home & {
+      background: #f2f0f0;
+    }
   }
 
   .entry-line {
@@ -231,11 +235,5 @@
 
   .meta-wrapper {
     text-align: center;
-  }
-
-  .pn-tags {
-    &:before {
-
-    }
   }
 }

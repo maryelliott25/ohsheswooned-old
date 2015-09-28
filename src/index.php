@@ -23,15 +23,19 @@ get_header(); ?>
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<div class="featured-post">
 						<a href="<?php the_permalink(); ?>">
-							<?php 
+							<?php
 							the_post_thumbnail();
 							?>
 						</a>
 						<div class="slide-info">
 							<div class="slide-copy">
 								<?php
+									$current_post_type = get_post_type();
+									if($current_post_type === 'oss_recipe') {
+										echo '<a href="<?php echo get_post_type_archive_link("oss_recipe"); ?>" title="View all recipes">Recipes</a>';
+									} else if ($current_post_type === 'post')
 									foreach((get_the_category()) as $category) {
-									    if ($category->cat_name != 'Featured') {
+									  if ($category->cat_name != 'Featured') {
 									    echo '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>' . $category->name.'</a> ';
 										}
 									}

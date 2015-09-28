@@ -840,9 +840,9 @@ body {
 .about-image {
   padding: 0 30px; }
 
-.oss_recipe .featured-image-wrapper {
+.single-oss_recipe .featured-image-wrapper {
   height: 450px; }
-.oss_recipe .featured-image {
+.single-oss_recipe .featured-image {
   position: absolute;
   width: 100%;
   top: auto;
@@ -851,14 +851,14 @@ body {
   background-size: cover;
   background-position: center center;
   height: 450px; }
-.oss_recipe .social-icons {
+.single-oss_recipe .social-icons {
   width: 50px;
   height: 200px;
   position: absolute;
   left: 0;
   top: auto;
   font-size: 0; }
-.oss_recipe .social-icon {
+.single-oss_recipe .social-icon {
   width: 50px;
   height: 50px;
   font-size: 16px;
@@ -866,46 +866,48 @@ body {
   background-position: center center;
   background-size: cover;
   cursor: pointer; }
-  .oss_recipe .social-icon.facebook {
+  .single-oss_recipe .social-icon.facebook {
     background-image: url('/wp-content/themes/oss/assets/images/facebook-icon.jpg'); }
-  .oss_recipe .social-icon.twitter {
+  .single-oss_recipe .social-icon.twitter {
     background-image: url('/wp-content/themes/oss/assets/images/twitter-icon.jpg'); }
-  .oss_recipe .social-icon.pinterest {
+  .single-oss_recipe .social-icon.pinterest {
     background-image: url('/wp-content/themes/oss/assets/images/pinterest-icon.jpg'); }
-  .oss_recipe .social-icon.evernote {
+  .single-oss_recipe .social-icon.evernote {
     background-image: url('/wp-content/themes/oss/assets/images/evernote-icon.jpg'); }
-.oss_recipe .entry-header {
+.single-oss_recipe .entry-header {
   text-align: center;
   margin: 0 auto 25px;
   max-width: 1160px;
   padding: 25px;
   position: relative; }
-.oss_recipe .entry-meta {
+.single-oss_recipe .entry-meta {
   font-size: 0; }
-.oss_recipe .meta-icon {
+.single-oss_recipe .meta-icon {
   display: inline-block;
   font-size: 16px; }
-  .oss_recipe .meta-icon .icon-image {
+  .single-oss_recipe .meta-icon .icon-image {
     width: 50px;
     height: 50px;
     background-position: center center;
     background-size: contain; }
-  .oss_recipe .meta-icon .icon-clock {
+  .single-oss_recipe .meta-icon .icon-clock {
     background-image: url('/wp-content/themes/oss/assets/images/watch-icon.png'); }
-  .oss_recipe .meta-icon .icon-silverware {
+  .single-oss_recipe .meta-icon .icon-silverware {
     background-image: url('/wp-content/themes/oss/assets/images/silverware-icon.png'); }
-  .oss_recipe .meta-icon .icon-tags {
+  .single-oss_recipe .meta-icon .icon-tags {
     background-image: url('/wp-content/themes/oss/assets/images/tag-icon.png'); }
-.oss_recipe .title-wrapper {
+.single-oss_recipe .title-wrapper {
   position: relative;
   width: 100%; }
-.oss_recipe .entry-title {
+.single-oss_recipe .entry-title {
   padding: 0 30px;
   background: white;
   display: inline-block;
   position: relative;
   z-index: 2; }
-.oss_recipe .entry-line {
+  .home .single-oss_recipe .entry-title {
+    background: #f2f0f0; }
+.single-oss_recipe .entry-line {
   content: '';
   position: absolute;
   width: 100%;
@@ -914,66 +916,66 @@ body {
   background: #f2f0f0;
   bottom: 20px;
   z-index: 1; }
-.oss_recipe .entry-content {
+.single-oss_recipe .entry-content {
   max-width: 1160px;
   padding: 25px;
   margin: 0 auto;
   position: relative; }
-  .oss_recipe .entry-content:after {
+  .single-oss_recipe .entry-content:after {
     visibility: hidden;
     display: block;
     font-size: 0;
     content: " ";
     clear: both;
     height: 0; }
-.oss_recipe .oss-ingredients-wrapper {
+.single-oss_recipe .oss-ingredients-wrapper {
   width: calc(30% - 50px);
   position: absolute;
   top: auto;
   left: 25px; }
-.oss_recipe .ingredients {
+.single-oss_recipe .ingredients {
   background: #f2f0f0;
   padding: 15px; }
-.oss_recipe .post-content {
+.single-oss_recipe .post-content {
   width: 70%;
   float: right;
   vertical-align: top; }
-  .oss_recipe .post-content *:first-child {
+  .single-oss_recipe .post-content *:first-child {
     margin-top: 0; }
-.oss_recipe .previous-next-posts {
+.single-oss_recipe .previous-next-posts {
   clear: both;
   max-width: 1160px;
   padding: 25px 0;
   margin: 0 auto;
   position: relative;
   font-size: 0; }
-.oss_recipe .pn-post {
+.single-oss_recipe .pn-post {
   display: inline-block;
   width: 50%;
   font-size: 16px;
   vertical-align: top; }
-  .oss_recipe .pn-post.next-post {
+  .single-oss_recipe .pn-post.next-post {
     text-align: right;
     padding-left: 70px; }
-    .oss_recipe .pn-post.next-post .pn-image {
+    .single-oss_recipe .pn-post.next-post .pn-image {
       float: right; }
-    .oss_recipe .pn-post.next-post .pn-tags:after {
+    .single-oss_recipe .pn-post.next-post .pn-tags:after {
       content: url('/wp-content/themes/oss/assets/images/tag-icon-small.jpg');
       width: 22px;
       height: 22px;
       display: inline-block; }
-  .oss_recipe .pn-post.previous-post {
+  .single-oss_recipe .pn-post.previous-post {
     padding-right: 70px; }
-    .oss_recipe .pn-post.previous-post .pn-image {
+    .single-oss_recipe .pn-post.previous-post .pn-image {
       float: left; }
-    .oss_recipe .pn-post.previous-post .pn-tags:before {
+    .single-oss_recipe .pn-post.previous-post .pn-tags:before {
       content: url('/wp-content/themes/oss/assets/images/tag-icon-small.jpg');
       width: 22px;
       height: 22px;
       display: inline-block; }
-.oss_recipe .pn-content {
+.single-oss_recipe .pn-content {
   background: #f2f0f0; }
-  .oss_recipe .pn-content:after {
+  .single-oss_recipe .pn-content:after {
     clear: both;
     content: ' ';
     visibility: hidden;
@@ -981,7 +983,7 @@ body {
     font-size: 0;
     clear: both;
     height: 0; }
-.oss_recipe .pn-meta {
+.single-oss_recipe .pn-meta {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 15px;
@@ -991,13 +993,13 @@ body {
   z-index: 2;
   display: inline-block;
   margin: 0 auto 15px; }
-.oss_recipe .header-line {
+.single-oss_recipe .header-line {
   position: relative;
   bottom: 24px;
   height: 1px;
   background: #f2f0f0;
   z-index: 1; }
-.oss_recipe .meta-wrapper {
+.single-oss_recipe .meta-wrapper {
   text-align: center; }
 
 #comments .comments-divider {
