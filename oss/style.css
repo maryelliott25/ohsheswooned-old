@@ -518,7 +518,12 @@ td, th {
 
 .featured-post-slider {
   position: relative;
-  text-align: center; }
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s 0.2s ease-out;
+  -moz-transition: opacity 0.3s 0.2s ease-out;
+  transition: opacity 0.3s 0.2s ease-out;
+  margin-bottom: 30px; }
   .featured-post-slider .featured-post {
     position: absolute;
     top: 0;
@@ -526,7 +531,8 @@ td, th {
     .featured-post-slider .featured-post:first-child {
       position: relative; }
   .featured-post-slider.slick-initialized {
-    text-align: left; }
+    text-align: left;
+    opacity: 1; }
 
 .slick-initialized .featured-post {
   position: relative; }

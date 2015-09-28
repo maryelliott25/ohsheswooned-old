@@ -282,6 +282,9 @@ $slick-opacity-not-active: 1 !default;
 .featured-post-slider {
   position: relative;
   text-align: center;
+  opacity: 0;
+  @include transition(opacity 0.3s 0.2s ease-out);
+  margin-bottom: 30px;
 
   .featured-post {
     position: absolute;
@@ -295,6 +298,7 @@ $slick-opacity-not-active: 1 !default;
 
   &.slick-initialized {
     text-align: left;
+    opacity: 1;
   }
 }
 
