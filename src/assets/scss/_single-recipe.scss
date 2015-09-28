@@ -1,4 +1,34 @@
 .oss_recipe {
+  .entry-meta {
+    font-size: 0;
+  }
+
+  .meta-icon {
+    display: inline-block;
+    font-size: 16px;
+
+    .icon-image {
+      width: 50px;
+      height: 50px;
+      background-position: center center;
+      background-size: contain;
+    }
+
+    .icon-clock {
+      background-image: url('/wp-content/themes/oss/assets/images/watch-icon.png');
+    }
+
+    .icon-silverware {
+      background-image: url('/wp-content/themes/oss/assets/images/silverware-icon.png');
+    }
+
+    .icon-tags {
+      background-image: url('/wp-content/themes/oss/assets/images/tag-icon.png');
+    }
+  }
+}
+
+.single-oss_recipe {
 
   .featured-image-wrapper {
     height: 450px;
@@ -58,34 +88,6 @@
     position: relative;
   }
 
-  .entry-meta {
-    font-size: 0;
-  }
-
-  .meta-icon {
-    display: inline-block;
-    font-size: 16px;
-
-    .icon-image {
-      width: 50px;
-      height: 50px;
-      background-position: center center;
-      background-size: contain;
-    }
-
-    .icon-clock {
-      background-image: url('/wp-content/themes/oss/assets/images/watch-icon.png');
-    }
-
-    .icon-silverware {
-      background-image: url('/wp-content/themes/oss/assets/images/silverware-icon.png');
-    }
-
-    .icon-tags {
-      background-image: url('/wp-content/themes/oss/assets/images/tag-icon.png');
-    }
-  }
-
   .title-wrapper {
     position: relative;
     width: 100%;
@@ -97,6 +99,10 @@
     display: inline-block;
     position: relative;
     z-index: 2;
+
+    .home & {
+      background: #f2f0f0;
+    }
   }
 
   .entry-line {
@@ -105,7 +111,7 @@
     width: 100%;
     left: 0;
     height: 2px;
-    background: lightgrey;
+    background: #f2f0f0;
     bottom: 20px;
     z-index: 1;
   }
@@ -134,7 +140,7 @@
   }
 
   .ingredients {
-    background: lightgrey;
+    background: #f2f0f0;
     padding: 15px;
   }
 
@@ -151,9 +157,85 @@
   .previous-next-posts {
     clear: both;
     max-width: 1160px;
-    padding: 25px;
+    padding: 25px 0;
     margin: 0 auto;
     position: relative;
+    font-size: 0;
   }
 
+  .pn-post {
+    display: inline-block;
+    width: 50%;
+    font-size: 16px;
+    vertical-align: top;
+
+    &.next-post {
+      text-align: right;
+      padding-left: 70px;
+
+      .pn-image {
+        float: right;
+      }
+
+      .pn-tags:after {
+        content: url('/wp-content/themes/oss/assets/images/tag-icon-small.jpg');
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+      }
+    }
+
+    &.previous-post {
+      padding-right: 70px;
+
+      .pn-image {
+        float: left;
+      }
+
+      .pn-tags:before {
+        content: url('/wp-content/themes/oss/assets/images/tag-icon-small.jpg');
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+      }
+    }
+  }
+
+  .pn-content {
+    background: #f2f0f0;
+
+    &:after {
+      clear: both;
+      content: ' ';
+      visibility: hidden;
+    	display: block;
+    	font-size: 0;
+    	clear: both;
+    	height: 0;
+    }
+  }
+
+  .pn-meta {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    background: white;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    margin: 0 auto 15px;
+  }
+
+  .header-line {
+    position: relative;
+    bottom: 24px;
+    height: 1px;
+    background: #f2f0f0;
+    z-index: 1;
+  }
+
+  .meta-wrapper {
+    text-align: center;
+  }
 }

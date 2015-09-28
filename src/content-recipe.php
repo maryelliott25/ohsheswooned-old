@@ -86,12 +86,14 @@
 
       $prev_post = mod_get_adjacent_post('prev', array('oss_recipe', 'post'));
 			if($prev_post) { ?>
-        <div class="pn-meta">Previous Post</div>
-        <div class="header-line"></div>
         <div class="pn-post previous-post">
+          <div class="meta-wrapper">
+            <div class="pn-meta">Previous Post</div>
+            <div class="header-line"></div>
+          </div>
           <?php $prev_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $prev_post->ID ), 'thumbnail' )[0]; ?>
-          <img src="<?php echo $prev_thumbnail; ?>" class="pn-image" />
           <div class="pn-content">
+            <img src="<?php echo $prev_thumbnail; ?>" class="pn-image" />
             <h4 class="pn-title"><a href="<?php echo get_permalink($prev_post->ID); ?>"><?php echo get_the_title($prev_post->ID); ?></a></h4>
             <div class="pn-date"><?php echo get_the_date('l, F jS, Y', $prev_post->ID); ?></div>
             <?php $tags = get_the_tags($prev_post->ID);
@@ -112,14 +114,16 @@
 
       <?php $next_post = mod_get_adjacent_post('next', array('oss_recipe', 'post'));
 			if($next_post) { ?>
-        <div class="pn-meta">Next Post</div>
-        <div class="header-line"></div>
         <div class="pn-post next-post">
+          <div class="meta-wrapper">
+            <div class="pn-meta">Next Post</div>
+            <div class="header-line"></div>
+          </div>
           <?php $next_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $next_post->ID ), 'thumbnail' )[0]; ?>
-          <img src="<?php echo $next_thumbnail; ?>" class="pn-image" />
           <div class="pn-content">
+            <img src="<?php echo $next_thumbnail; ?>" class="pn-image" />
             <h4 class="pn-title"><a href="<?php echo get_permalink($next_post->ID); ?>"><?php echo get_the_title($next_post->ID); ?></a></h4>
-            <div class="pn-date"><?php get_the_date('l, F jS, Y', $next_post->ID); ?></div>
+            <div class="pn-date"><?php echo get_the_date('l, F jS, Y', $next_post->ID); ?></div>
             <?php $tags = get_the_tags($next_post->ID);
             if($tags) {
               echo "<div class='pn-tags'>";

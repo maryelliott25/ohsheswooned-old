@@ -141,13 +141,15 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-function register_recipes_post_type() {
-    $args = array( 'public' => true, 'label' => 'Recipes' );
-    register_post_type( 'recipe', $args );
-}
-add_action( 'init', 'register_recipes_post_type' );
-
 /**
  * Recipe post type
  */
 require get_template_directory() . '/inc/post-type-recipe.php';
+
+require get_template_directory() . '/inc/comment-walker.php';
+
+/**
+ * Set up some custom image sizes
+ */
+
+add_image_size('homepage-featured', 725, 450, array('center', 'center'));

@@ -247,3 +247,16 @@ function oss_print_ingredients($ingredients) {
     </div>";
   }
 }
+
+/**
+ * Add recipes to homepage loop
+ */
+
+add_action( 'pre_get_posts', 'include_recipes_in_home' );
+
+function include_recipes_in_home( $query ) {
+
+   if ( ! is_admin() && $query->is_main_query() && $query->is_home() ) {
+       $query->set( 'post_type', array( 'post', 'oss_recipe' ) );
+   }
+}
