@@ -1,3 +1,33 @@
+.oss_recipe {
+  .entry-meta {
+    font-size: 0;
+  }
+
+  .meta-icon {
+    display: inline-block;
+    font-size: 16px;
+
+    .icon-image {
+      width: 50px;
+      height: 50px;
+      background-position: center center;
+      background-size: contain;
+    }
+
+    .icon-clock {
+      background-image: url('/wp-content/themes/oss/assets/images/watch-icon.png');
+    }
+
+    .icon-silverware {
+      background-image: url('/wp-content/themes/oss/assets/images/silverware-icon.png');
+    }
+
+    .icon-tags {
+      background-image: url('/wp-content/themes/oss/assets/images/tag-icon.png');
+    }
+  }
+}
+
 .single-oss_recipe {
 
   .featured-image-wrapper {
@@ -56,34 +86,6 @@
     max-width: 1160px;
     padding: 25px;
     position: relative;
-  }
-
-  .entry-meta {
-    font-size: 0;
-  }
-
-  .meta-icon {
-    display: inline-block;
-    font-size: 16px;
-
-    .icon-image {
-      width: 50px;
-      height: 50px;
-      background-position: center center;
-      background-size: contain;
-    }
-
-    .icon-clock {
-      background-image: url('/wp-content/themes/oss/assets/images/watch-icon.png');
-    }
-
-    .icon-silverware {
-      background-image: url('/wp-content/themes/oss/assets/images/silverware-icon.png');
-    }
-
-    .icon-tags {
-      background-image: url('/wp-content/themes/oss/assets/images/tag-icon.png');
-    }
   }
 
   .title-wrapper {
