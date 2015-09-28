@@ -151,3 +151,5 @@ add_action( 'init', 'register_recipes_post_type' );
  * Recipe post type
  */
 require get_template_directory() . '/inc/post-type-recipe.php';
+
+require get_template_directory() . '/inc/comment-walker.php';
