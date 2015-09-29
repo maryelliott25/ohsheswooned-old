@@ -1,0 +1,241 @@
+.oss_recipe {
+  .entry-meta {
+    font-size: 0;
+  }
+
+  .meta-icon {
+    display: inline-block;
+    font-size: 16px;
+
+    .icon-image {
+      width: 50px;
+      height: 50px;
+      background-position: center center;
+      background-size: contain;
+    }
+
+    .icon-clock {
+      background-image: url('/wp-content/themes/oss/assets/images/watch-icon.png');
+    }
+
+    .icon-silverware {
+      background-image: url('/wp-content/themes/oss/assets/images/silverware-icon.png');
+    }
+
+    .icon-tags {
+      background-image: url('/wp-content/themes/oss/assets/images/tag-icon.png');
+    }
+  }
+}
+
+.single-oss_recipe {
+
+  .featured-image-wrapper {
+    height: 450px;
+  }
+
+  .featured-image {
+    position: absolute;
+    width: 100%;
+    top: auto;
+    left: 0;
+    background-color: blue;
+    background-size: cover;
+    background-position: center center;
+    height: 450px;
+  }
+
+  .social-icons {
+    width: 50px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: auto;
+    font-size: 0;
+  }
+
+  .social-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    display: inline-block;
+    background-position: center center;
+    background-size: cover;
+    cursor: pointer;
+
+    &.facebook {
+      background-image: url('/wp-content/themes/oss/assets/images/facebook-icon.jpg');
+    }
+
+    &.twitter {
+      background-image: url('/wp-content/themes/oss/assets/images/twitter-icon.jpg');
+    }
+
+    &.pinterest {
+      background-image: url('/wp-content/themes/oss/assets/images/pinterest-icon.jpg');
+    }
+
+    &.evernote {
+      background-image: url('/wp-content/themes/oss/assets/images/evernote-icon.jpg');
+    }
+  }
+
+  .entry-header {
+    text-align: center;
+    margin: 0 auto 25px;
+    max-width: 1160px;
+    padding: 25px;
+    position: relative;
+  }
+
+  .title-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .entry-title {
+    padding: 0 30px;
+    background: white;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+
+    .home & {
+      background: #f2f0f0;
+    }
+  }
+
+  .entry-line {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 2px;
+    background: #f2f0f0;
+    bottom: 20px;
+    z-index: 1;
+  }
+
+  .entry-content {
+    max-width: 1160px;
+    padding: 25px;
+    margin: 0 auto;
+    position: relative;
+
+    &:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: " ";
+      clear: both;
+      height: 0;
+    }
+  }
+
+  .oss-ingredients-wrapper {
+    width: calc(30% - 50px);
+    position: absolute;
+    top: auto;
+    left: 25px;
+  }
+
+  .ingredients {
+    background: #f2f0f0;
+    padding: 15px;
+  }
+
+  .post-content {
+    width: 70%;
+    float: right;
+    vertical-align: top;
+
+    *:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .previous-next-posts {
+    clear: both;
+    max-width: 1160px;
+    padding: 25px 0;
+    margin: 0 auto;
+    position: relative;
+    font-size: 0;
+  }
+
+  .pn-post {
+    display: inline-block;
+    width: 50%;
+    font-size: 16px;
+    vertical-align: top;
+
+    &.next-post {
+      text-align: right;
+      padding-left: 70px;
+
+      .pn-image {
+        float: right;
+      }
+
+      .pn-tags:after {
+        content: url('/wp-content/themes/oss/assets/images/tag-icon-small.jpg');
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+      }
+    }
+
+    &.previous-post {
+      padding-right: 70px;
+
+      .pn-image {
+        float: left;
+      }
+
+      .pn-tags:before {
+        content: url('/wp-content/themes/oss/assets/images/tag-icon-small.jpg');
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+      }
+    }
+  }
+
+  .pn-content {
+    background: #f2f0f0;
+
+    &:after {
+      clear: both;
+      content: ' ';
+      visibility: hidden;
+    	display: block;
+    	font-size: 0;
+    	clear: both;
+    	height: 0;
+    }
+  }
+
+  .pn-meta {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    background: white;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    margin: 0 auto 15px;
+  }
+
+  .header-line {
+    position: relative;
+    bottom: 24px;
+    height: 1px;
+    background: #f2f0f0;
+    z-index: 1;
+  }
+
+  .meta-wrapper {
+    text-align: center;
+  }
+}

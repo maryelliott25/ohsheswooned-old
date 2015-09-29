@@ -16,8 +16,8 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<script type="text/javascript" src="wp-content/themes/oss/js/vendor.js"></script>
-<script type="text/javascript" src="wp-content/themes/oss/js/app.js"></script>
+<script type="text/javascript" src="/wp-content/themes/oss/js/vendor.js"></script>
+<script type="text/javascript" src="/wp-content/themes/oss/js/app.js"></script>
 
 
 </body>

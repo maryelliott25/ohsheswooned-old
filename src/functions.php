@@ -112,6 +112,7 @@ function oss_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
 }
 add_action( 'wp_enqueue_scripts', 'oss_scripts' );
 
@@ -139,3 +140,16 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Recipe post type
+ */
+require get_template_directory() . '/inc/post-type-recipe.php';
+
+require get_template_directory() . '/inc/comment-walker.php';
+
+/**
+ * Set up some custom image sizes
+ */
+
+add_image_size('homepage-featured', 725, 450, array('center', 'center'));

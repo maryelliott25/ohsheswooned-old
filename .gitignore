@@ -1,4 +1,7 @@
 node_modules/
+wordpress/
+target/
+oss/
 .scss-lint.yml
 project.sublime-project
 project.sublime-workspace
