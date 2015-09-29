@@ -139,9 +139,3 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
-function register_recipes_post_type() {
-    $args = array( 'public' => true, 'label' => 'Recipes' );
-    register_post_type( 'recipe', $args );
-}
-add_action( 'init', 'register_recipes_post_type' );
