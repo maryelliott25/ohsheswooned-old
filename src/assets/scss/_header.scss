@@ -4,7 +4,7 @@
 }
 
 .main-navigation ul {
-	display: block;
+	display: table;
 	width: 100%;
 	max-width: 1020px;
 	margin: 0 auto;
@@ -12,9 +12,8 @@
 	overflow: hidden;
 
 	li {
-		display: block;
+		display: table-cell;
 		float: left;
-		width: 16.6%;
 		text-align: center;
 		padding: 25px 0;
 	}

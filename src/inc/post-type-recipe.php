@@ -32,7 +32,7 @@ function oss_create_recipe_post_type() {
         'excerpt'
       ),
       'register_meta_box_cb' => 'oss_create_recipe_post_meta_boxes',
-      'taxonomies' => array('post_tag')
+      'taxonomies' => array('post_tag', 'category')
     )
   );
 }

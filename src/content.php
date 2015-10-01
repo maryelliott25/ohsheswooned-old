@@ -31,38 +31,39 @@
 	?>
 	<div class="post-body-copy">
 		<header class="entry-header">
+			<?php if ($current_post_type === 'oss_recipe') : ?>
+				<div class="meta-icon-wrapper">
+					<div class="meta-icon">
+					  <div class="icon-image icon-clock"></div>
+					  <div class="icon-text"><?php
+					    $cook_time = get_post_meta( $post->ID, '_oss_time_value_key', true );
+					    echo $cook_time;
+					  ?></div>
+					</div>
+
+					<div class="meta-icon">
+					  <div class="icon-image icon-silverware"></div>
+					  <div class="icon-text"><?php
+					    $servings = get_post_meta( $post->ID, '_oss_servings_value_key', true );
+					    echo $servings;
+					  ?></div>
+					</div>
+				</div>
+			<?php endif; ?>
+
 			<div class="post-title-wrap"><?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?></div>
 
-			<?php if ( $current_post_type === 'post' ) : ?>
 			<div class="entry-meta">
 				<?php the_date('l, F j, Y'); ?>
 			</div><!-- .entry-meta -->
-		<?php elseif ($current_post_type === 'oss_recipe') : ?>
-			<div class="entry-meta">
-	      <div class="meta-icon">
-	        <div class="icon-image icon-clock"></div>
-	        <div class="icon-text"><?php
-	          $cook_time = get_post_meta( $post->ID, '_oss_time_value_key', true );
-	          echo $cook_time;
-	        ?></div>
-	      </div>
-
-	      <div class="meta-icon">
-	        <div class="icon-image icon-silverware"></div>
-	        <div class="icon-text"><?php
-	          $servings = get_post_meta( $post->ID, '_oss_servings_value_key', true );
-	          echo $servings;
-	        ?></div>
-	      </div>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
+		
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">
 			<?php
 				/* translators: %s: Name of current post */
-				if(is_archive() && ($current_post_type === 'oss_recipe')) {
-					the_excerpt();
+				if($current_post_type === 'oss_recipe') {
+					echo '<p>' . get_the_excerpt() . '</p>';
 				} else {
 					the_content('...Read More');
 				}
