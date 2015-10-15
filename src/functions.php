@@ -152,4 +152,22 @@ require get_template_directory() . '/inc/comment-walker.php';
  * Set up some custom image sizes
  */
 
-add_image_size('homepage-featured', 725, 450, array('center', 'center'));
+// add_image_size('homepage-featured', 725, 450, array('center', 'center'));
+
+if (class_exists('MultiPostThumbnails')) {
+
+	new MultiPostThumbnails(array(
+		'label' => 'Secondary Image',
+		'id' => 'secondary-image',
+		'post_type' => 'oss_recipe'
+	) );
+}
+
+if (class_exists('MultiPostThumbnails')) {
+
+	new MultiPostThumbnails(array(
+		'label' => 'Secondary Image',
+		'id' => 'secondary-image',
+		'post_type' => 'post'
+	) );
+}

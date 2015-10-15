@@ -4,6 +4,13 @@
 
 .post-thumbnail {
 	display: block;
+	opacity: 1;
+	@include transition(opacity 300ms);
+	-webkit-backface-visibility: hidden;
+
+	&:hover {
+		opacity: 0.85;
+	}
 }
 
 .post-category-wrap {
@@ -28,6 +35,7 @@
 .post-title-wrap {
 	position: relative;
 	text-align: center;
+	padding-top: 10px;
 
 	&:after {
 		content: "";
@@ -51,6 +59,18 @@
 		outline: 20px solid $primary-color;
 		background-color: $primary-color;
 		padding-top: 2px;
+	}
+}
+
+.meta-icon-wrapper {
+	text-align: center;
+
+	.meta-icon {
+		margin: 0 2%;
+	}
+
+	.icon-image {
+		margin: 0 auto;
 	}
 }
 
@@ -85,11 +105,10 @@
 	.page-numbers {
 		margin: 0 3px;
 		padding: 7px 10px;
-		border: 1px solid $border-color;
+		background-color: $primary-color;
 
 		&:hover {
-			background-color: $primary-color;
-			border: 1px solid $primary-color;
+			background-color: $primary-darken;
 		}
 	}
 
@@ -110,7 +129,6 @@
 	}
 
 	.current {
-		background-color: $primary-color;
-		border: 1px solid $primary-color;
+		background-color: $primary-darken;
 	}
 }

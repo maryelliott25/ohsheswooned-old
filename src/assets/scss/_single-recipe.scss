@@ -1,8 +1,4 @@
 .oss_recipe {
-  .entry-meta {
-    font-size: 0;
-  }
-
   .meta-icon {
     display: inline-block;
     font-size: 16px;
@@ -86,6 +82,19 @@
     max-width: 1160px;
     padding: 25px;
     position: relative;
+  }
+
+  .meta-icon-wrapper {
+    text-align: center;
+
+    .meta-icon {
+      margin: 0;
+      width: 20%;
+    }
+
+    .icon-image {
+      margin: 0 auto;
+    }
   }
 
   .title-wrapper {

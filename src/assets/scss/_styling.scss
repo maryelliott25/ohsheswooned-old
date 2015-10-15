@@ -1,5 +1,6 @@
 //Color Variables
 $primary-color: rgb(242, 240, 240);
+$primary-darken: #E2E0E0;
 $border-color: rgba(0, 0, 0, 0.15);
 $secondary-copy-color: rgba(0, 0, 0, 0.5);
 
@@ -45,6 +46,10 @@ h2.site-description {
 	font-size: 0.75em;
 	text-transform: uppercase;
 	letter-spacing: $large-tracking;
+
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 //Slider Typography
@@ -102,9 +107,13 @@ h2.slide-title {
 	}
 }
 
-.index-post-tags {
+.index-post-tags, .icon-text {
 	@include set-font('Crimson Text', normal);
 	font-size: 0.75em;
+
+	a:hover {
+		text-decoration: underline;
+	}
 }
 
 .index-posts-navigation {

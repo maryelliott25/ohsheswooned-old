@@ -12,21 +12,26 @@
   <!-- Featured image -->
   <?php if(has_post_thumbnail( $post->ID )) { ?>
   <div class="featured-image-wrapper">
-    <?php $featured_image_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0]; ?>
+    <?php $featured_image_src = 
+      MultiPostThumbnails::get_post_thumbnail_url(
+          get_post_type(),
+          'secondary-image'
+      )
+    ?>
     <div class="featured-image" style="background-image: url('<?php echo $featured_image_src; ?>');"></div>
   </div>
   <?php } ?>
 
   <!-- Right aligned social icons -->
-  <div class="social-icons">
+  <!-- <div class="social-icons">
     <a href="http://facebook.com" class="social-icon facebook"></a>
     <a href="http://pinterest.com" class="social-icon pinterest"></a>
     <a href="http://twitter.com" class="social-icon twitter"></a>
     <a href="http://evernote.com" class="social-icon evernote"></a>
-  </div>
+  </div> -->
 
 	<header class="entry-header">
-    <div class="entry-meta">
+    <div class="meta-icon-wrapper">
 
       <div class="meta-icon">
         <div class="icon-image icon-clock"></div>

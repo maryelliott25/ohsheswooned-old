@@ -19,16 +19,18 @@
 		}
 	?>
 	</div>
-	<?php
-		if(has_post_thumbnail()) {
-				if(is_home()) {
-					$image_src = wp_get_attachment_image_src( get_post_thumbnail_id(),'homepage-featured' );
-				} else {
-		    	$image_src = wp_get_attachment_image_src( get_post_thumbnail_id(),'full' );
-				}
-		    echo '<img src="' . $image_src[0]  . '" class="post-thumbnail" width="100%"  />';
-		}
-	?>
+	<a class="index-feature-img" href="<?php the_permalink(); ?>">
+		<?php
+			if(has_post_thumbnail()) {
+					if(is_home()) {
+						$image_src = wp_get_attachment_image_src( get_post_thumbnail_id(),'homepage-featured' );
+					} else {
+			    	$image_src = wp_get_attachment_image_src( get_post_thumbnail_id(),'full' );
+					}
+			    echo '<img src="' . $image_src[0]  . '" class="post-thumbnail" width="100%"  />';
+			}
+		?>
+	</a>
 	<div class="post-body-copy">
 		<header class="entry-header">
 			<?php if ($current_post_type === 'oss_recipe') : ?>

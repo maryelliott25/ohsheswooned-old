@@ -1,14 +1,13 @@
 // Include gulp
-var gulp         = require('gulp'),
-    
-    autoprefixer = require('gulp-autoprefixer'),
-    changed      = require('gulp-changed'),
-    concat       = require('gulp-concat'),
-    jshint       = require('gulp-jshint'),
-    livereload   = require('gulp-livereload'),
-    merge        = require('merge-stream'),
-    sass         = require('gulp-sass'),
-    scsslint     = require('gulp-scss-lint');
+var gulp       = require('gulp'),
+
+    changed    = require('gulp-changed'),
+    concat     = require('gulp-concat'),
+    jshint     = require('gulp-jshint'),
+    livereload = require('gulp-livereload'),
+    merge      = require('merge-stream'),
+    sass       = require('gulp-sass'),
+    scsslint   = require('gulp-scss-lint');
 
 var SRC = 'src';
 var DEST = 'oss';
@@ -47,10 +46,6 @@ gulp.task('sass', function() {
         .pipe(scsslint())
         .pipe(sass({
             includePaths: require('node-bourbon').includePaths
-        }))
-        .pipe(autoprefixer({
-            browers: ['last 2 versions'],
-            cascade: false
         }))
         .pipe(gulp.dest(DEST))
         .pipe(livereload());

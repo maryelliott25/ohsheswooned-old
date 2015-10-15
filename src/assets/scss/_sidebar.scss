@@ -12,6 +12,11 @@
 	    line-height: 40px;
 	    background-color: $primary-color;
 	    border-bottom: 2px solid #FFFFFF;
+	    @include transition(background-color 300ms);
+
+	    &:hover {
+	    	background-color: $primary-darken;
+	    }
 	}
 }
 
