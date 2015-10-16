@@ -73,6 +73,19 @@ h2.slide-title {
 	text-transform: uppercase;
 }
 
+//Share Styling
+.post-date {
+	@include set-font('Crimson Text', normal, italic);
+	font-size: 0.8125em;
+	text-align: center;
+	margin-bottom: 2.6923em;
+}
+
+.entry-content p, .entry-excerpt p {
+	font-size: 1.125em;
+	line-height: 1.8889em;
+}
+
 //Index Post Styling
 .post-category-wrap a {
 	@include set-font('Lato', bold);
@@ -88,13 +101,6 @@ h2.slide-title {
 		text-transform: uppercase;
 		letter-spacing: 0.03em;
 		-webkit-font-smoothing: antialiased;
-	}
-
-	.entry-meta {
-		@include set-font('Crimson Text', normal, italic);
-		font-size: 0.8125em;
-		text-align: center;
-		margin-bottom: 2.6923em;
 	}
 
 	.entry-content p {

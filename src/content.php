@@ -55,7 +55,7 @@
 
 			<div class="post-title-wrap"><?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?></div>
 
-			<div class="entry-meta">
+			<div class="post-date">
 				<?php the_date('l, F j, Y'); ?>
 			</div><!-- .entry-meta -->
 		

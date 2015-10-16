@@ -35,7 +35,6 @@
     width: 100%;
     top: auto;
     left: 0;
-    background-color: blue;
     background-size: cover;
     background-position: center center;
     height: 450px;
@@ -78,9 +77,9 @@
 
   .entry-header {
     text-align: center;
-    margin: 0 auto 25px;
+    margin: 0 auto;
     max-width: 1160px;
-    padding: 25px;
+    padding: 25px 25px 0;
     position: relative;
   }
 
@@ -93,25 +92,13 @@
     }
 
     .icon-image {
-      margin: 0 auto;
+      margin: 0 auto 5px;
     }
   }
 
-  .title-wrapper {
-    position: relative;
-    width: 100%;
-  }
-
-  .entry-title {
-    padding: 0 30px;
-    background: white;
-    display: inline-block;
-    position: relative;
-    z-index: 2;
-
-    .home & {
-      background: #f2f0f0;
-    }
+  .post-title-wrap h1 a {
+    background-color: white;
+    outline-color: white;
   }
 
   .entry-line {
@@ -127,7 +114,7 @@
 
   .entry-content {
     max-width: 1160px;
-    padding: 25px;
+    padding: 0 25px 25px;
     margin: 0 auto;
     position: relative;
 
@@ -142,7 +129,7 @@
   }
 
   .oss-ingredients-wrapper {
-    width: calc(30% - 50px);
+    width: 350px;
     position: absolute;
     top: auto;
     left: 25px;
@@ -154,8 +141,7 @@
   }
 
   .post-content {
-    width: 70%;
-    float: right;
+    margin-left: 400px;
     vertical-align: top;
 
     *:first-child {

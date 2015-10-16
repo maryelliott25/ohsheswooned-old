@@ -59,10 +59,7 @@
       <?php } ?>
 
 		</div><!-- .entry-meta -->
-    <div class="title-wrapper">
-  		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-      <div class="entry-line"></div>
-    </div>
+    <div class="post-title-wrap"><?php the_title( sprintf( '<h1 class="entry-title"><a rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?></div>
 
     <div class="post-date"><?php the_date('l, F jS, Y'); ?></div>
 

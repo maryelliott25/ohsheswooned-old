@@ -44,7 +44,7 @@
 	    background-color: rgba(0, 0, 0, 0.15);
 	    height: 1px;
 	    width: 100%;
-	    top: 45%;
+	    top: 50%;
 	    z-index: 0;
 	}
 	
@@ -70,11 +70,11 @@
 	}
 
 	.icon-image {
-		margin: 0 auto;
+		margin: 0 auto 5px;
 	}
 }
 
-.entry-meta {
+.post-date {
 	position: relative;
 	z-index: 2;
 }
