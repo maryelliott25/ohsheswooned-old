@@ -30,6 +30,10 @@
         cursor: pointer;
         cursor: hand;
     }
+
+    @media (max-width: 800px) {
+        overflow: hidden;
+    }
 }
 .slick-slider .slick-track,
 .slick-slider .slick-list {

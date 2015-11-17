@@ -63,13 +63,11 @@
 
 		<div class="entry-content">
 			<?php
-				/* translators: %s: Name of current post */
-				if($current_post_type === 'oss_recipe') {
-					echo '<p>' . get_the_excerpt() . '</p>';
+				if(has_excerpt()) {
+					echo '<p>' . get_the_excerpt() . '<em><a class="more-link" href="' . get_permalink() . '">...Read More</a></em>' . '</p>';
 				} else {
 					the_content('...Read More');
 				}
-
 			?>
 
 			<?php

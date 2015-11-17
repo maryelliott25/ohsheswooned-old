@@ -26,20 +26,6 @@
 
 .single-oss_recipe {
 
-  .featured-image-wrapper {
-    height: 450px;
-  }
-
-  .featured-image {
-    position: absolute;
-    width: 100%;
-    top: auto;
-    left: 0;
-    background-size: cover;
-    background-position: center center;
-    height: 450px;
-  }
-
   .social-icons {
     width: 50px;
     height: 200px;
@@ -83,6 +69,10 @@
     position: relative;
   }
 
+  .entry-excerpt {
+    margin-bottom: 40px;
+  }
+
   .meta-icon-wrapper {
     text-align: center;
 
@@ -96,7 +86,11 @@
     }
   }
 
-  .post-title-wrap h1 a {
+  .post-title-wrap {
+    margin-top: 25px;
+  }
+
+  .post-title-wrap h1 a, .post-title-wrap h2 a {
     background-color: white;
     outline-color: white;
   }
@@ -137,7 +131,7 @@
 
   .ingredients {
     background: #f2f0f0;
-    padding: 15px;
+    padding: 20px;
   }
 
   .post-content {
@@ -147,79 +141,11 @@
     *:first-child {
       margin-top: 0;
     }
-  }
 
-  .previous-next-posts {
-    clear: both;
-    max-width: 1160px;
-    padding: 25px 0;
-    margin: 0 auto;
-    position: relative;
-    font-size: 0;
-  }
-
-  .pn-post {
-    display: inline-block;
-    width: 50%;
-    font-size: 16px;
-    vertical-align: top;
-
-    &.next-post {
-      text-align: right;
-      padding-left: 70px;
-
-      .pn-image {
-        float: right;
-      }
-
-      .pn-tags:after {
-        content: url('/wp-content/themes/oss/assets/images/tag-icon-small.jpg');
-        width: 22px;
-        height: 22px;
-        display: inline-block;
-      }
+    img {
+      width: 100%;
+      max-width: 100%;
     }
-
-    &.previous-post {
-      padding-right: 70px;
-
-      .pn-image {
-        float: left;
-      }
-
-      .pn-tags:before {
-        content: url('/wp-content/themes/oss/assets/images/tag-icon-small.jpg');
-        width: 22px;
-        height: 22px;
-        display: inline-block;
-      }
-    }
-  }
-
-  .pn-content {
-    background: #f2f0f0;
-
-    &:after {
-      clear: both;
-      content: ' ';
-      visibility: hidden;
-    	display: block;
-    	font-size: 0;
-    	clear: both;
-    	height: 0;
-    }
-  }
-
-  .pn-meta {
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    padding: 0 15px;
-    background: white;
-    position: relative;
-    z-index: 2;
-    display: inline-block;
-    margin: 0 auto 15px;
   }
 
   .header-line {

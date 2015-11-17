@@ -23,9 +23,8 @@ if ( post_password_required() ) {
 	<div class="comments-divider"></div>
 
 	<div class="comments-inner">
-		<div class="comments-heading">
-			<h3>Comments</h3>
-			<div class="comments-line"></div>
+		<div class="post-title-wrap">
+			<h3 class="entry-title"><a>Comments</a></h3>
 		</div>
 
 		<?php // You can start editing here -- including this comment! ?>

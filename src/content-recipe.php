@@ -81,7 +81,7 @@
       </div>
     <?php } ?>
 
-    <div class="post-content"><?php the_content(); ?></div>
+    <div class="post-content recipe-post-content"><?php the_content(); ?></div>
 
     <div class="previous-next-posts">
 		<?php
@@ -97,19 +97,21 @@
           <div class="pn-content">
             <img src="<?php echo $prev_thumbnail; ?>" class="pn-image" />
             <h4 class="pn-title"><a href="<?php echo get_permalink($prev_post->ID); ?>"><?php echo get_the_title($prev_post->ID); ?></a></h4>
-            <div class="pn-date"><?php echo get_the_date('l, F jS, Y', $prev_post->ID); ?></div>
-            <?php $tags = get_the_tags($prev_post->ID);
-            if($tags) {
-              echo "<div class='pn-tags'>";
-              $tag_array = [];
-              foreach($tags as $tag) {
-                $tag_name = $tag->name;
-                $tag_link = get_tag_link($tag->term_id);
-                $tag_array[] = "<a href='$tag_link'>$tag_name</a>";
-              }
-              echo implode(', ', $tag_array);
-              echo "</div>";
-            } ?>
+            <div class="pn-info">
+              <div class="pn-date"><?php echo get_the_date('l, F jS, Y', $prev_post->ID); ?></div>
+              <?php $tags = get_the_tags($prev_post->ID);
+              if($tags) {
+                echo "<div class='pn-tags'>";
+                $tag_array = [];
+                foreach($tags as $tag) {
+                  $tag_name = $tag->name;
+                  $tag_link = get_tag_link($tag->term_id);
+                  $tag_array[] = "<a href='$tag_link'>$tag_name</a>";
+                }
+                echo implode(', ', $tag_array);
+                echo "</div>";
+              } ?>
+            </div>
           </div>
         </div>
       <?php }?>
@@ -125,19 +127,21 @@
           <div class="pn-content">
             <img src="<?php echo $next_thumbnail; ?>" class="pn-image" />
             <h4 class="pn-title"><a href="<?php echo get_permalink($next_post->ID); ?>"><?php echo get_the_title($next_post->ID); ?></a></h4>
-            <div class="pn-date"><?php echo get_the_date('l, F jS, Y', $next_post->ID); ?></div>
-            <?php $tags = get_the_tags($next_post->ID);
-            if($tags) {
-              echo "<div class='pn-tags'>";
-              $tag_array = [];
-              foreach($tags as $tag) {
-                $tag_name = $tag->name;
-                $tag_link = get_tag_link($tag->term_id);
-                $tag_array[] = "<a href='$tag_link'>$tag_name</a>";
-              }
-              echo implode(', ', $tag_array);
-              echo "</div>";
-            } ?>
+            <div class="pn-info">
+              <div class="pn-date"><?php echo get_the_date('l, F jS, Y', $next_post->ID); ?></div>
+              <?php $tags = get_the_tags($next_post->ID);
+              if($tags) {
+                echo "<div class='pn-tags'>";
+                $tag_array = [];
+                foreach($tags as $tag) {
+                  $tag_name = $tag->name;
+                  $tag_link = get_tag_link($tag->term_id);
+                  $tag_array[] = "<a href='$tag_link'>$tag_name</a>";
+                }
+                echo implode(', ', $tag_array);
+                echo "</div>";
+              } ?>
+            </div>
           </div>
         </div>
       <?php }?>

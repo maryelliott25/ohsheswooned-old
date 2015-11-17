@@ -31,6 +31,10 @@ ul {
 	padding: 0;
 }
 
+ol {
+	padding-left: 1em;
+}
+
 //Header Typography
 
 h2.site-description {
@@ -73,7 +77,7 @@ h2.slide-title {
 	text-transform: uppercase;
 }
 
-//Share Styling
+//Shared Styling
 .post-date {
 	@include set-font('Crimson Text', normal, italic);
 	font-size: 0.8125em;
@@ -148,11 +152,156 @@ h2.slide-title {
 		color: #000000;
 		vertical-align: middle;
 	}
+
+	.about-copy {
+		@include set-font('Crimson Text', normal, italic);
+		font-size: 0.75em;
+		line-height: 1.5em;
+		text-align: center;
+	}
 }
 
-.about-copy {
-	@include set-font('Crimson Text', normal, italic);
+//Shared Post Styling
+h1.entry-title, h2.entry-title {
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: $small-tracking;
+	-webkit-font-smoothing: antialiased;
+}
+
+//Recipe Styling
+.ingredients h3 {
+	@include set-font('Lato', bold);
+	text-transform: uppercase;
+	letter-spacing: $small-tracking;
+	margin-bottom: 15px;
+}
+
+.ingredient-line {
+	@include set-font('Lato', normal);
+	font-size: 1em;
+	line-height: 1.6;
+
+	.ingredient-qty {
+		display: inline-block;
+		min-width: 40px;
+		text-align: right;
+		margin-right: 10px;
+	}
+}
+
+.recipe-post-content {
+	ol {
+		text-align: left;
+	}
+
+	p, li {
+		@include set-font('Crimson Text', normal);
+		font-size: 1em;
+		line-height: 2;
+		margin-bottom: 1em;
+	}
+
+	p::first-letter {
+		padding-right: 5px;
+		font-weight: bold;
+	}
+}
+
+//Previous Next Posts
+.pn-meta {
+	@include set-font('Lato', normal);
 	font-size: 0.75em;
-	line-height: 1.5em;
-	text-align: center;
+	text-transform: uppercase;
+}
+
+.pn-title {
+	@include set-font('Crimson Text', bold);
+	font-size: 1.125em;
+	text-transform: uppercase;
+	letter-spacing: $small-tracking;
+}
+
+.pn-date {
+	@include set-font('Crimson Text', normal, italic);
+	font-size: 0.8125em;
+}
+
+.pn-tags {
+	@include set-font('Crimson Text' normal);
+	font-size: 0.75em;
+}
+
+//Comments
+.comments-area {
+	h3.entry-title {
+		@include set-font('Crimson Text', bold);
+		font-size: 1.5em;
+		text-transform: uppercase;
+		letter-spacing: $small-tracking;
+	}
+
+	h3.comment-reply-title {
+		@include set-font('Crimson Text', bold);
+		font-size: 1.125em;
+		text-transform: uppercase;
+		letter-spacing: $small-tracking;
+	}
+
+	input, textarea {
+		@include set-font('Crimson Text', normal);
+		font-size: 0.875em;
+
+		&.submit {
+			@include set-font('Lato', bold);
+			text-transform: uppercase;
+			font-size: 0.75em;
+		}
+	}
+
+	.comment-author {
+		@include set-font('Lato', normal);
+		font-size: 1em;
+		margin-bottom: 1em;
+
+		.comment-author-link {
+			text-transform: uppercase;
+			font-weight: light;
+			font-size: 1.125em;
+			letter-spacing: $small-tracking;
+		}
+		
+		.comment-author-phrase {
+			font-size: 0.875em;
+		}
+	}
+
+	.comment-content {
+		@include set-font('Crimson Text', normal);
+		font-size: 1em;
+
+		p {
+			margin-bottom: 2em;
+		}
+	}
+
+	.comment-meta-item, .comment-reply-link {
+		@include set-font('Lato', bold);
+		font-size: 0.75em;
+	}
+
+	.comment-meta-item {
+		text-transform: capitalize;
+	}
+
+	.comment-reply-link {
+		text-transform: uppercase;
+		letter-spacing: $small-tracking;
+		margin-left: 50px;
+	}
+}
+
+//Search Form
+.search-form {
+	@include set-font('Lato');
 }

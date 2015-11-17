@@ -23,8 +23,9 @@ get_header(); ?>
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<div class="featured-post">
 						<a href="<?php the_permalink(); ?>">
-							<?php
-							the_post_thumbnail();
+							<?php 
+								$url = wp_get_attachment_url( get_post_thumbnail_id() );
+								echo '<img src="' . $url . '" width="100%" />'
 							?>
 						</a>
 						<div class="slide-info">

@@ -1,0 +1,53 @@
+.single-post {
+	.entry-header {
+	  text-align: center;
+	  margin: 0 auto;
+	  max-width: 1160px;
+	  padding: 25px 25px 0;
+	  position: relative;
+	}
+
+	.post-title-wrap {
+		margin-top: 25px;
+	}
+
+	.post-title-wrap h1 a {
+	  background-color: white;
+	  outline-color: white;
+	}
+
+	.entry-content {
+	  max-width: 1160px;
+	  padding: 0 25px 25px;
+	  margin: 0 auto;
+	  position: relative;
+	}
+
+	.entry-excerpt {
+		margin-bottom: 40px;
+	}
+
+	.post-content {
+		display: block;
+		width: 100%;
+		max-width: 960px;
+		margin: 0 auto;
+
+		img {
+		  width: 100%;
+		  max-width: 100%;
+		}
+	}
+
+	.header-line {
+	  position: relative;
+	  bottom: 24px;
+	  height: 1px;
+	  background: #f2f0f0;
+	  z-index: 1;
+	}
+
+	.meta-wrapper {
+	  text-align: center;
+	}
+}

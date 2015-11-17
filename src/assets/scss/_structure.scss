@@ -2,10 +2,14 @@
 	box-sizing: border-box;
 }
 
-body {
+.body-inner-wrap {
 	padding: 50px;
   background-color: $primary-color;
 	overflow-x: hidden;
+
+  @media (max-width: 1200px) {
+    padding: 10px;
+  }
 }
 
 .site {
@@ -21,6 +25,31 @@ body {
 
 .post-wrap {
 	margin-left: 400px;
+}
+
+.featured-image-wrapper:after {
+  content: '';
+  display: block;
+  padding-top: 13.9%;
+  min-height: 300px;
+  max-height: 450px;
+}
+
+.featured-image {
+  position: absolute;
+  width: 100%;
+  top: auto;
+  left: 0;
+  background-size: cover;
+  background-position: center center;
+
+  &:after {
+  	content: '';
+  	display: block;
+  	padding-top: 13.9%;
+    min-height: 300px;
+    max-height: 450px;
+  }
 }
 
 .widget-area {

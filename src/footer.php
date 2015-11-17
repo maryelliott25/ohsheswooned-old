@@ -19,6 +19,6 @@
 <script type="text/javascript" src="/wp-content/themes/oss/js/vendor.js"></script>
 <script type="text/javascript" src="/wp-content/themes/oss/js/app.js"></script>
 
-
+</div>
 </body>
 </html>
