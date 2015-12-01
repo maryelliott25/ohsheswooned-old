@@ -50,4 +50,30 @@
 	.meta-wrapper {
 	  text-align: center;
 	}
+
+	@media (max-width: 700px) {
+		.post-title-wrap:after {
+			display: none;
+		}
+
+		.entry-header {
+			padding: 25px 0 0;
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	.single-post {
+		.post-title-wrap {
+			margin-top: 0;
+		}
+
+		.post-date {
+			margin-bottom: 0;
+		}
+
+		.entry-content {
+			padding: 0 0 25px;
+		}
+	}
 }

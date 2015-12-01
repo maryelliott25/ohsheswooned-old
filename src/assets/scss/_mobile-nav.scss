@@ -1,8 +1,8 @@
 .hidden-nav {
-	position: absolute;
+	position: fixed;
 	z-index: 0;
-	left: 10px;
-    width: 190px;
+	left: 0;
+    width: 200px;
     display: none;
 
 	ul {
@@ -43,7 +43,8 @@
 	@include transition(left 300ms ease);
 }
 
-.main-navigation {
+.nav-icon {
+	display: none;
 	@include transition(left 300ms ease);
 }
 
@@ -52,32 +53,35 @@
 		display: block;
 	}
 	
-	.main-navigation {
+	.nav-icon {
+		display: block;
 		position: fixed;
-		top: 20px;
-		width: 30px;
-		height: 30px;
-		background-image: url('/wp-content/themes/oss/assets/images/nav-icon.png');
-		background-size: contain;
+	    top: 5px;
+	    width: 40px;
+	    height: 40px;
+	    background-image: url('/wp-content/themes/oss/assets/images/nav-icon.png');
+	    background-size: 75%;
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	    background-color: rgba(255, 255, 255, 0.85);
+	    z-index: 15;
+	    border: 1px solid rgba(0, 0, 0, 0.15);
+	    border-radius: 25px;
+	}
 
-		.menu-main-navigation-container {
-			display: none;
-		}
+	.main-navigation {
+		display: none;
 	}
 
 	.closed {
-		.main-navigation {
-			left: 20px;
+		.nav-icon {
+			left: 5px;
 		}
 	}
 
 	.open {
-		#page {
-			left: 200px;
-		}
-
-		.main-navigation {
-			left: 220px;
+		.nav-icon {
+			left: 205px;
 		}
 	}
 }

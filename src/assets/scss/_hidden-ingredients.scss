@@ -1,0 +1,78 @@
+.hidden-ingredients {
+	position: fixed;
+	z-index: 0;
+	left: 0;
+    width: 200px;
+    display: none;
+}
+
+.ingredients-icon {
+	display: none;
+	left: 15px;
+	@include transition(left 300ms ease);
+}
+
+#page {
+	position: relative;
+	left: 0;
+	z-index: 12;
+	@include transition(left 300ms ease);
+}
+
+@media (max-width: 1010px) {
+	.ingredients-icon {
+		position: fixed;
+		display: block;
+	    top: 15px;
+	    left: 15px;
+	    width: 40px;
+	    height: 40px;
+	    background-image: url('/wp-content/themes/oss/assets/images/measuring-spoons.png');
+	    background-size: 75%;
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	    background-color: rgba(255, 255, 255, 0.85);
+	    z-index: 15;
+	    border: 1px solid rgba(0, 0, 0, 0.15);
+	    border-radius: 25px;
+	}
+
+	.hidden-ingredients {
+		display: block;
+	}
+
+	.open {
+		.ingredients-icon {
+			left: 215px;
+		}
+
+		#page {
+			left: 200px;
+		}
+	}
+
+	.ingredients-open {
+		.hidden-ingredients {
+			z-index: 10;
+		}
+	}
+
+	.ingredients-closed {
+		.hidden-ingredients {
+			z-index: -1;
+		}
+	}
+}
+
+@media (max-width: 650px) {
+	.ingredients-icon {
+		top: 50px;
+		left: 5px;
+	}
+
+	.open {
+		.ingredients-icon {
+			left: 205px;
+		}
+	}
+}

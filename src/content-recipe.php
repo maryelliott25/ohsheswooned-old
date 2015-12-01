@@ -39,17 +39,17 @@
           $cook_time = get_post_meta( $post->ID, '_oss_time_value_key', true );
           echo $cook_time;
         ?></div>
-      </div>
+      </div><!--
 
-      <div class="meta-icon">
+      --><div class="meta-icon">
         <div class="icon-image icon-silverware"></div>
         <div class="icon-text"><?php
           $servings = get_post_meta( $post->ID, '_oss_servings_value_key', true );
           echo $servings;
         ?></div>
-      </div>
+      </div><!--
 
-      <?php
+      --><?php
       $tags = get_the_tags();
       if($tags) { ?>
       <div class="meta-icon">

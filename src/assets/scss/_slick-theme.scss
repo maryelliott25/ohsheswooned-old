@@ -232,7 +232,7 @@ $slick-opacity-not-active: 1 !default;
     display: block;
     text-align: center;
     padding: 0;
-    width: auto;
+    width: 100%;
     left: 50%;
     @include transform(translateX(-50%));
     li {

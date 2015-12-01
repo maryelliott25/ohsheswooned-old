@@ -7,7 +7,7 @@
  * @package oss
  */
 ?><!DOCTYPE html>
-<html class="closed" <?php language_attributes(); ?>>
+<html class="nav-closed ingredients-closed closed" <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,6 +25,17 @@
 		<div class="hidden-nav">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</div>
+		<div class="nav-icon menu-icon"></div>
+		<?php $ingredients = oss_has_ingredients($post->ID);
+		  if($ingredients && is_singular( 'oss_recipe' )) { ?>
+		  <div class="hidden-ingredients">
+		    <div class="ingredients">
+		        <h3>Ingredients</h3>
+		        <?php oss_print_ingredients($ingredients); ?>
+		    </div>
+		  </div>
+		  <div class="ingredients-icon menu-icon"></div>
+		<?php } ?>
 		<div id="page" class="hfeed site">
 
 			<header id="masthead" class="site-header" role="banner">

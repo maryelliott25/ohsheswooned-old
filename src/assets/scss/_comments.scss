@@ -1,5 +1,10 @@
 #comments {
 
+  ol {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
   .comment {
     margin-bottom: 30px;
   }
@@ -10,7 +15,7 @@
     left: -50px;
     background: #f2f0f0;
     height: 50px;
-    margin: 50px 0;
+    margin: 10px 0;
   }
 
   .comments-inner {
@@ -38,6 +43,7 @@
 
   .comment-table {
     display: table;
+    width: 100%;
   }
 
   .gravatar {
@@ -49,6 +55,10 @@
     vertical-align: top;
     float: left;
     display: table-cell;
+
+    @media (max-width: 550px) {
+      display: none;
+    }
   }
 
   .comment-content-outer {
@@ -56,6 +66,14 @@
     display: table-cell;
     vertical-align: top;
     width: 100%;
+
+    @media (max-width: 750px) {
+      padding: 0 0 0 22px;
+    }
+
+    @media (max-width: 550px) {
+      padding: 0;
+    }
   }
 
   .comment-content-inner {
@@ -73,12 +91,20 @@
       left: -23px;
       top: 30px;
       position: absolute;
+
+      @media (max-width: 550px) {
+        display: none;
+      }
     }
   }
 
   .child-comments {
     padding-left: 150px;
     margin-top: 30px;
+
+    @media (max-width: 750px) {
+      padding-left: 0;
+    }
   }
 
   .comment-respond {

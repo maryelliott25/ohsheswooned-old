@@ -6,10 +6,6 @@
 	padding: 50px;
   background-color: $primary-color;
 	overflow-x: hidden;
-
-  @media (max-width: 1200px) {
-    padding: 10px;
-  }
 }
 
 .site {
@@ -19,8 +15,8 @@
 
 .content-wrap {
 	position: relative;
-  	max-width: 1125px;
-  	margin: 100px auto 0;
+  max-width: 1125px;
+  margin: 100px auto 0;
 }
 
 .post-wrap {
@@ -31,7 +27,7 @@
   content: '';
   display: block;
   padding-top: 13.9%;
-  min-height: 300px;
+  min-height: 200px;
   max-height: 450px;
 }
 
@@ -47,7 +43,7 @@
   	content: '';
   	display: block;
   	padding-top: 13.9%;
-    min-height: 300px;
+    min-height: 200px;
     max-height: 450px;
   }
 }
@@ -57,4 +53,66 @@
 	top: 0;
 	left: 0;
 	width: 300px;
+}
+
+@media (max-width: 1215px) {
+  .body-inner-wrap {
+    padding: 10px;
+  }
+
+  .post-wrap {
+    margin-left: 350px;
+  }
+}
+
+@media (max-width: 1085px) {
+  .post-wrap {
+    margin-left: 300px;
+  }
+
+  .widget-area {
+    width: 250px;
+  }
+}
+
+@media (max-width: 1035px) {
+  .post-wrap {
+    margin-left: 250px;
+  }
+
+  .widget-area {
+    width: 200px;
+  }
+}
+
+@media (max-width: 985px) {
+  .content-wrap {
+    max-width:  750px;
+  }
+  
+  .post-wrap {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .widget-area {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: 450px;
+    margin: 50px auto 0;
+  }
+}
+
+@media (max-width: 735px) {
+  .site {
+    padding: 50px 20px 50px;
+  }
+}
+
+@media (max-width: 650px) {
+  .body-inner-wrap {
+    padding: 0;
+  }
 }

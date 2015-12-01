@@ -105,6 +105,10 @@ h2.slide-title {
 		text-transform: uppercase;
 		letter-spacing: 0.03em;
 		-webkit-font-smoothing: antialiased;
+
+		@media (max-width: 675px) {
+			font-size: 1.2em;
+		}
 	}
 
 	.entry-content p {
@@ -169,6 +173,12 @@ h1.entry-title, h2.entry-title {
 	-webkit-font-smoothing: antialiased;
 }
 
+@media (max-width: 400px) {
+	.post-title-wrap .entry-title {
+		font-size: 1.7em;
+	}
+}
+
 //Recipe Styling
 .ingredients h3 {
 	@include set-font('Lato', bold);
@@ -180,12 +190,14 @@ h1.entry-title, h2.entry-title {
 .ingredient-line {
 	@include set-font('Lato', normal);
 	font-size: 1em;
-	line-height: 1.6;
+	line-height: 1.2;
+    margin-bottom: 0.5em;
 
 	.ingredient-qty {
-		display: inline-block;
-		min-width: 40px;
-		text-align: right;
+		// display: inline-block;
+		// min-width: 40px;
+		// text-align: right;
+		font-weight: bold;
 		margin-right: 10px;
 	}
 }
@@ -298,6 +310,12 @@ h1.entry-title, h2.entry-title {
 		text-transform: uppercase;
 		letter-spacing: $small-tracking;
 		margin-left: 50px;
+
+		@media (max-width: 400px) {
+			display: block;
+			margin-left: 0;
+    		margin-top: 5px;
+		}
 	}
 }
 

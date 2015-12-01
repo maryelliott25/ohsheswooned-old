@@ -132,3 +132,47 @@
 		background-color: $primary-darken;
 	}
 }
+
+@media (max-width: 675px) {
+	.home {
+		.post-wrap article {
+			margin-top: 50px;
+		}
+
+		.entry-content {
+			display: none;
+		}
+
+		.meta-icon-wrapper {
+			display: none;
+		}
+
+		.post-body-copy {
+			padding: 10px;
+		}
+
+		.post-date {
+			margin-bottom: 1em;
+		}
+
+		.index-post-tags {
+			text-align: center;
+
+			.tag-icon {
+				width: 25px;
+			}
+		}
+
+		.post-title-wrap:after {
+			display: none;
+		}
+
+		.index-posts-navigation {
+			margin: 30px 0 30px;
+			.prev, .next {
+				position: static;
+				margin: 0;
+			}
+		}
+	}
+}

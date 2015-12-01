@@ -1,15 +1,21 @@
 (function (window, document, $, undefined) {
 
-  setTimeout(function() {
-    var heights = {
-      sidebar: $('#secondary').outerHeight() - 50,
-      posts: $('.post-wrap').outerHeight()
-    };
+  var setPostsHeight = function() {
+    setTimeout(function() {
+      var heights = {
+        sidebar: $('#secondary').outerHeight() - 50,
+        posts: $('.post-wrap').outerHeight()
+      };
 
-    if(heights.sidebar > heights.posts) {
-      $('.post-wrap').css('min-height', heights.sidebar);
-    }
-  }, 500);
+      if(heights.sidebar > heights.posts) {
+        $('.post-wrap').css('min-height', heights.sidebar);
+      }
+    }, 500);
+  };
+
+  if (windowWidth > 970) {
+    setPostsHeight();
+  }
 
   var $$ = {
     featuredSlider: $('#featured-slick'),
@@ -52,38 +58,63 @@
 
   var $window = $(window),
       $html = $('html'),
-      $nav = $('#site-navigation');
+      $nav = $('.nav-icon'),
+      $ingredients = $('.ingredients-icon'),
+      $icon = $('.menu-icon');
 
   var windowWidth = $window.width(),
       prevWidth = windowWidth;
 
-  $nav.click(function() {
-    if ($html.hasClass('open')) {
-      console.log('remove open');
-      $html.removeClass('open').addClass('closed');
-    } else {
-      console.log('remove closed');
-      $html.removeClass('closed').addClass('open');
-    }
-  });
+  var handleClick = function(icon, iconName, otherIcon) {
+    icon.click(function() {
+      if ($html.hasClass(iconName + '-open')) {
+        $html.removeClass('open').addClass('closed');
+        setTimeout(function() {
+          $html.removeClass(iconName + '-open').addClass(iconName + '-closed');
+        }, 300);
+      } else if ($html.hasClass(otherIcon + '-open')) {
+        $html.removeClass(otherIcon + '-open').addClass(otherIcon + '-closed').removeClass(iconName + '-closed').addClass(iconName + '-open');
+      } else {
+        $html.removeClass(iconName + '-closed').addClass(iconName + '-open').addClass('open').removeClass('closed');
+      }
+    });
+  };
 
-  var handleNav = function() {
-    if (windowWidth < 651 && prevWidth >= 651 || prevWidth < 651 && windowWidth >= 651) {
-      $html.removeClass('open');
-      $html.addClass('closed');
+  handleClick($nav, 'nav', 'ingredients');
+  handleClick($ingredients, 'ingredients', 'nav');
+
+  var handleNav = function(iconName, breakpoint) {
+    if (((windowWidth < breakpoint) && (prevWidth >= breakpoint)) || ((prevWidth < breakpoint) && (windowWidth >= breakpoint))) {
+      $html.removeClass(iconName + '-open');
+      $html.addClass(iconName + '-closed');
     }
   };
 
-  window.addEventListener('orientationchange', function() {
+  var resizeFunc = function() {
     prevWidth = windowWidth;
     windowWidth = $window.width();
-    handleNav();
+    handleNav('nav', 651);
+    handleNav('ingredients', 1010);
+  };
+
+  window.addEventListener('orientationchange', function() {
+    resizeFunc();
+    console.log(windowWidth);
+    if (windowWidth > 970) {
+      setPostsHeight();
+    } else {
+      $('.post-wrap').css('min-height', 'auto');
+    }
   });
 
   window.addEventListener('resize', function() {
-    prevWidth = windowWidth;
-    windowWidth = $window.width();
-    handleNav();
+    resizeFunc();
+    console.log(windowWidth);
+    if (windowWidth > 970) {
+      setPostsHeight();
+    } else {
+      $('.post-wrap').css('min-height', 'auto');
+    }
   });
 
 })(window, document, jQuery);
